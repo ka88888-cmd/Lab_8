@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "lab8_app"
+version = "0.1.0"
+description = "Lab 8 project"
+authors = ["Екатерина ka_88888@mail.ru"]
+readme = "README.md"
+packages = [{include = "temperature.py"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+flake8 = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
