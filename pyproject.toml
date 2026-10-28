@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "lab8_app"
+name = "lab8-app"
 version = "0.1.0"
 description = "Lab 8 project"
-authors = ["Екатерина ka_88888@mail.ru"]
+authors = ["Екатерина <ka_88888@mail.ru>"]
 readme = "README.md"
-packages = [{include = "temperature.py"}]
+packages = [{ include = "temperature.py", format = ["sdist", "wheel"] }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -12,6 +12,9 @@ python = "^3.9"
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
 flake8 = "*"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
 
 [build-system]
 requires = ["poetry-core"]
